@@ -1,0 +1,19 @@
+{
+  "name": "personal-website-trial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  },
+  "dependencies": {
+    "@grimlink/eleventy-plugin-sass": "^1.0.1",
+    "sass": "^1.49.7"
+  }
+}
