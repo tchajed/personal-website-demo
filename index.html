@@ -1,27 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Page title</title>
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body>
-    <h1>{{name}}</h1>
-    <p>{{email}}</p>
-    <p>Hello! My name is Tej and I'm a final-year PhD student at MIT working on
-    formal verification.</p>
-    <h2>Research</h2>
-    I make correct systems software.
-    <h2>Publications</h2>
-    <ul>
-      <li>
-        <p>
-        <span class="pub-title">
-          GoJournal: a verfied, concurrent, crash-safe journaling system
-        </span>
-        </p>
-        <p><span class="self-author">Tej Chajed</span>, Joseph Tassarotti, Mark
-        Theng, Ralf Jung, Frans Kaashoek, and Nickolai Zeldovich</p>
-      </li>
-    </ul>
-  </body>
+<head>
+  <title>Page title</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <h1>{{name}}</h1>
+  <p>{{email}}</p>
+  <p>Hello! My name is Tej and I'm a final-year PhD student at MIT
+  working on formal verification.</p>
+  <h2>Research</h2>I make correct systems software.
+  <h2>Publications</h2>
+  <ul class="publications">
+    {% for pub in publications %}
+    <li class="pub">
+      <p><span class="pub-title">{{ pub.title }}</span></p>
+      <p>{{ pub.authors }}</p>
+      <p>{{ pub.conference }}</p>
+    </li>{% endfor %}
+  </ul>
+</body>
 </html>

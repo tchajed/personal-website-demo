@@ -1,3 +1,8 @@
+$blue: #0051c9;
+@mixin bold {
+  font-weight: 600;
+}
+
 body {
   margin: 40px auto;
   max-width: 800px;
@@ -10,11 +15,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #0051c9;
+  color: $blue;
 }
 
 a:visited {
-  color: #0051c9;
+  color: $blue;
 }
 
 h1,
@@ -24,5 +29,20 @@ h3 {
 }
 
 .self-author {
-  font-weight: 600;
+  @include bold;
+}
+
+.pub-title {
+  font-size: 1.17em;
+  @include bold;
+  color: $blue;
+}
+
+.pub p {
+  line-height: 1;
+}
+
+.publications li {
+  list-style-type: "";
+  padding-bottom: 10px;
 }
