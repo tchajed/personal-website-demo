@@ -15,7 +15,7 @@
     {% for pub in publications %}
     <li class="pub">
       <p><span class="pub-title">{{ pub.title }}</span></p>
-      <p>{{ pub.authors }}</p>
+      <p>{{ pub.authors | safe }}</p>
       <p>{{ pub.conference }}</p>
     </li>{% endfor %}
   </ul>
