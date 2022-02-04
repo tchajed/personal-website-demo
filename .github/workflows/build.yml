@@ -10,22 +10,18 @@ jobs:
   build:
     runs-on: ubuntu-20.04
 
-    strategy:
-      matrix:
-        node-version: ["17.x"]
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install node.js ${{ matrix.node-version }}
+      - name: Install node.js
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: "17.x"
 
       - name: Install dependencies & build
         run: |
-          npm ci
-          npx @11ty/eleventy
+          npm install
+          npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
