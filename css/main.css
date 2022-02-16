@@ -23,6 +23,41 @@ h3 {
   line-height: 1.2;
 }
 
+table {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.name {
+  text-align: center;
+  margin-bottom: 0.1rem;
+}
+
+.email {
+  text-align: center;
+}
+
+table,
+tr,
+td {
+  padding: 0;
+}
+
+.bio {
+  padding-right: 2.5%;
+  width: 63%;
+  vertical-align: center;
+}
+
+.photo {
+  padding-left: 2.5%;
+  width: 30%;
+  max-width: 30%;
+}
+
 .self-author {
   font-weight: 600;
 }
