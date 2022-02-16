@@ -1,7 +1,33 @@
 # Academic personal website
 
-This is a relatively simple scaffold for an academic personal website, using the
+This is a scaffold for a simple academic personal website, using the
 [11ty](https://www.11ty.dev/) static-site generator.
+
+At a high level, what we'll do here is (1) write some code, and (2) compile that
+code to HTML and CSS that will make up your website files, and (3) deploy this
+website to a hosting service. If you use GitHub Pages to host your website,
+steps (2) and (3) will be largely invisible. You'll use some commands locally to
+preview your website, but every time you commit and push to your website
+repository it will get compiled and deployed automatically (see the section
+below on [hosting with GitHub pages](#github-pages) for more details).
+
+The section on [Using the template](#using-the-template) goes into more detail
+on what the code here is doing.
+
+A note on languages used here: this site uses several _template_ languages to
+simplify maintaining the website. A website at its core typically has HTML files
+(that have the content and structure) and CSS (which controls styling and
+placement) - JavaScript can add interactive functionality but we won't need that
+here. However, it's nice to be able to do a little programming to _generate_
+that HTML and CSS. For that, we use Nunjucks and Sass.
+
+The first thing you should know is that you can always write ordinary HTML in a
+Nunjucks file like `index.njk`, and ordinary CSS in a Sass file like
+`src/main.scss`. The additional power from Nunjucks is that the data for the
+publications list is written in `index.11tydata.js` - this is a JavaScript file,
+which gives a lot of flexibility. Again, you don't have to use the full power of
+JavaScript, and you'll still benefit from separating the data for the
+publications list from the HTML for it in the Nunjucks file.
 
 ## Installation
 
@@ -29,7 +55,8 @@ Visual Studio Code is a good choice of text editor on all platforms.
 ## Using the template
 
 Once you have node installed, you can compile and view the site by running the
-following in a terminal at the command line, in the directory with this repo:
+following in a terminal at the command line, in the directory with this repo (if
+you're using Visual Studio Code, its built-in terminal can do this, too):
 
 ```sh
 npm install
@@ -54,6 +81,11 @@ file, powered by the data from `index.11tydata.js`. Next, you can take a look at
 written in [Sass](https://sass-lang.com/documentation), which extends CSS with
 some nice features like variables and mixins.
 
+The file [.eleventy.js](.eleventy.js) sets up the static-site generator to tell
+it how to compile this code. The way things are setup the main thing to note
+here is that this tells 11ty to copy files in `assets/` directly to your website, so
+you can host your photo in the same place as the rest of the site.
+
 ## Writing a website
 
 The template doesn't have anything fancy in the way of design. Feel free to look
@@ -74,18 +106,31 @@ Firefox, Safari, and Edge all have similar features.
 We can give you three ways to deploy your site: GitHub Pages, CSAIL hosting, and
 MIT hosting.
 
+Which should you go with? This mainly affects the URL your website is at, and
+for CSAIL and MIT hosting how you make changes. Regardless of what you choose,
+people will be able to find your site through Google (though it can take a few
+days before your site gets picked up, and it will help if you link to it from
+things like your CSAIL profile and GitHub).
+
+I personally have a custom domain ([chajed.io](https://www.chajed.io)) and host
+the page through GitHub Pages. I like having a custom domain since it's short to
+give out, and I like owning a little slice of the internet.
+
 ### GitHub pages
 
 You should add this repo to your own GitHub account. Then go to its Settings
 page, click on Pages in the sidebar, and enable Pages. Deploy from the
 `gh-pages` branch. A GitHub Actions workflow
-([build.yml](.github/workflows/build.yml)) automatically compiles and deploys
+([build.yml](.github/workflows/build.yml)) automatically compiles (by running Eleventy) and deploys
 your site to this branch every time you push to the repository.
 
 By default, your site will be accessible from a URL like
-https://tchajed.github.io/personal-website-demo: it will use your username and
-whatever you named the repo. However, you can use just https://tchajed.github.io
-(again, with your username) by naming your repo tchajed.github.io.
+https://tchajed.github.io/personal-website-demo, but it will use your GitHub
+username and whatever you named the repo. However, you can use just
+https://tchajed.github.io by naming your repo tchajed.github.io (again, change
+tchajed to your user name). Take a look at https://pages.github.com/ for some
+relevant documentation. Note that we're _not_ using Jekyll for this site, but
+instead using Eleventy as a static-site generator.
 
 If you're willing to spend money on your website, you can also buy a custom
 domain and set it up with GitHub Pages. Take a look at [custom

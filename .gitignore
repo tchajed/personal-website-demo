@@ -1,2 +1,4 @@
+# this is the generated website
 /_site/
+# these are the dependencies from npm install
 node_modules/
