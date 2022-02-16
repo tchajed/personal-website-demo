@@ -1,53 +1,52 @@
 $blue: #0051c9;
 @mixin bold {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 body {
-  margin: 40px auto;
-  max-width: 800px;
-  line-height: 1.5;
-  font-size: 16px;
-  color: #333;
-  padding: 0 10px;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    margin: 40px auto;
+    max-width: 800px;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #333;
+    padding: 0 10px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
 a {
-  text-decoration: none;
-  color: $blue;
+    text-decoration: none;
+    color: $blue;
 }
 
 a:visited {
-  color: $blue;
+    color: $blue;
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+    line-height: 1.2;
 }
 
 .self-author {
-  @include bold;
+    @include bold;
 }
 
 .pub-title {
-  font-size: 1.17em;
-  @include bold;
-  color: $blue;
+    font-size: 1.17em;
+    @include bold;
+    color: $blue;
 }
 
 .pub p {
-  line-height: 1;
+    line-height: 1;
 }
 
 ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .publications li {
-  list-style-type: "";
-  padding-bottom: 10px;
+    list-style-type: "";
+    padding-bottom: 10px;
 }

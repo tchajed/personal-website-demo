@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Tej Chajed (demo)</title>
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1.0">
-  <meta name="description" content=
-  "Tej Chajed is a PhD student at MIT">
-  <link rel="stylesheet" href="{{ 'css/main.css' | url }}">
-</head>
-<body>
-  <h1>{{name}}</h1>
-  <p>{{email}}</p>
-  <p>Hello! My name is Tej and I'm a final-year PhD student at MIT
+  <head>
+    <meta charset="utf-8">
+    <title>Tej Chajed (demo)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tej Chajed is a PhD student at MIT">
+    <link rel="stylesheet" href="{{ 'css/main.css' | url }}">
+  </head>
+  <body>
+    <h1>{{name}}</h1>
+    <p>{{email}}</p>
+    <p>Hello! My name is Tej and I'm a final-year PhD student at MIT
   working on formal verification.</p>
-  <h2>Research</h2>I make correct systems software.
-  <h2>Publications</h2>
-  <ul class="publications">
-    {% for pub in publications %}
-    <li class="pub">
-      <p><span class="pub-title">{{ pub.title }}</span></p>
-      <p>{{ pub.authors | safe }}</p>
-      <p>{{ pub.conference }}</p>
-    </li>{% endfor %}
-  </ul>
-</body>
+    <h2>Research</h2>
+    I make correct systems software.
+    <h2>Publications</h2>
+    <ul class="publications">
+      {% for pub in publications %}
+        <li class="pub">
+          <p>
+            <span class="pub-title">{{ pub.title }}</span></p>
+          <p>{{ pub.authors | safe }}</p>
+          <p>{{ pub.conference }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
 </html>

@@ -1,0 +1,3 @@
+[*.{css,scss,js,html,njk}]
+indent_style = space
+indent_size = 4
