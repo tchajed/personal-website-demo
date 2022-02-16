@@ -9,9 +9,11 @@ To get started, you'll need to use git to clone this repository, install Node.js
 to run the generator (for testing locally), and then edit the code in a text
 editor.
 
-If you've never done this kind of thing before, on Windows you'll probably want
-[Git Bash](https://gitforwindows.org/) and a text editor. Visual Studio Code is
-a good choice of text editor on all platforms.
+If you've never done this kind of thing before, on Windows you can use the [git
+binary installer](https://git-scm.com/download/win) or [GitHub
+desktop](https://desktop.github.com/). There are a lot of tutorials on version
+control with git, but it's a big topic that hopefully you won't need for your
+personal website where you aren't collaborating with anyone.
 
 To build locally you'll just need [Node.js](https://nodejs.org/en/), a
 widely-used JavaScript runtime. There are several ways to install it, depending
@@ -21,6 +23,8 @@ option (`brew install node`), while on Linux I think
 version. On Windows I found [nvm for
 Windows](https://github.com/coreybutler/nvm-windows) to be easy to use
 (confusingly, this is not the same as the main nvm project).
+
+Visual Studio Code is a good choice of text editor on all platforms.
 
 ## Using the template
 
