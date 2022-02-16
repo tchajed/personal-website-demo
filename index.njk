@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="{{ 'css/main.css' | url }}">
   </head>
   <body>
-    <h1>{{name}}</h1>
-    <p>{{email}}</p>
-    <p>Hello! My name is Tej and I'm a final-year PhD student at MIT
-  working on formal verification.</p>
+    <table>
+      <tbody>
+        <tr>
+          <td class="bio">
+            <h1 class="name">{{name}}</h1>
+            <div class="email">{{email}}</div>
+            <p>Hello! My name is Tej and I'm a final-year PhD student at MIT
+                working on formal verification.</p>
+          </td>
+          <td class="photo">
+            <img src="https://www.chajed.io/assets/portrait.jpg" width="100%" height="100%">
+          </td>
+        </tr>
+      </tbody>
+    </table>
     <h2>Research</h2>
     I make correct systems software.
     <h2>Publications</h2>
