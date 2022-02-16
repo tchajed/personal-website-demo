@@ -11,6 +11,21 @@ preview your website, but every time you commit and push to your website
 repository it will get compiled and deployed automatically (see the section
 below on [hosting with GitHub pages](#github-pages) for more details).
 
+This README is long, but you don't have to read the whole thing all at once.
+Here's an outline:
+
+- Technical details (how to use this repo)
+  - [Installation](#installation)
+  - [Using the template](#using-the-template)
+  - [Writing a website](#writing-a-website)
+  - [Questions you might have](#questions-you-might-have)
+- [Deploying your website](#deploying-your-website)
+  - [GitHub pages](#github-pages)
+  - [CSAIL](#csail)
+  - [MIT](#mit)
+- [What to put on your website](#what-to-put-on-your-website)
+  - [Examples](#examples)
+
 The section on [Using the template](#using-the-template) goes into more detail
 on what the code here is doing.
 
@@ -134,7 +149,7 @@ Firefox, Safari, and Edge all have similar features.
   to do any of this - copy-pasting code is totally acceptable.
 
 
-## Deploying your website
+# Deploying your website
 
 We can give you three ways to deploy your site: GitHub Pages, CSAIL hosting, and
 MIT hosting.
@@ -179,7 +194,8 @@ running your website - you're just buying a domain that points to their servers.
 
 ### CSAIL
 
-Take a look at https://tig.csail.mit.edu/web-services/personal-web-page/.
+If you have a CSAIL account, you can use their hosting.  Take a look at
+https://tig.csail.mit.edu/web-services/personal-web-page/.
 
 You'll need to use AFS, so take a look at
 https://tig.csail.mit.edu/data-storage/afs/afs-basic-use/. (Note: AFS is terrible.)
@@ -199,3 +215,42 @@ You'll want to use something to copy files to the server, like `rsync` or an SCP
 client.
 
 This will be at a URL like https://www.mit.edu/~jda/.
+
+# What to put on your website
+
+Some things you should definitely include:
+
+- Name and contact info
+- Biographical information (affiliation, undergrad institution typically, often
+  your advisor and/or research group)
+- Describe your research area. Early on, this might be just a sentence or a
+  phrase, but eventually it will become more specific.
+- Your publications. This is often something people are looking for, and a great
+  opportunity to sell your work even if they aren't specifically looking.
+- A (good, professional) photo. Not strictly necessary but very helpful.
+
+What else might you include? A website is a bit like a CV. However, it's also
+more free-form so include whatever you want people to see. For example:
+
+- A link to your CV
+- Classes you've taught or been a TA for
+- Service (program committees, artifact evaluation, sub-reviewing, workshops
+  you've organized)
+- Hobbies and interests
+- Portfolio of your art or coding or whatever other work
+- You can make your publications more useful by including links to the PDFs
+
+## Examples
+
+Here are some examples for inspiration, or for copying bits and pieces from:
+
+- [Tej Chajed](https://chajed.io) (my website)
+- [Jon Barron](https://jonbarron.info/)
+- [Aurojit Panda](https://cs.nyu.edu/~apanda/)
+- [Yun-Sheng Chan](https://yunshengtw.github.io/)
+- [Deian Stefan](https://cseweb.ucsd.edu/~dstefan/)
+- [Frans Kaashoek](https://people.csail.mit.edu/kaashoek/) (my advisor - this is
+  what an old school website looks like)
+- [Nickolai Zeldovich](https://people.csail.mit.edu/nickolai/) (my other advisor -
+  this might not be the prettiest but Nickolai keeps everything extremely
+  up-to-date)
