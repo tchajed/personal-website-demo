@@ -6,8 +6,17 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(eleventySass, { sass });
 
     // Include any files in assets/ directly in your website without modifying
-    // them. You can also use this for paper PDFs, or add other directories.
-    eleventyConfig.addPassthroughCopy("assets");
+    // them. You can also use this for paper PDFs.
+    //
+    // See https://www.11ty.dev/docs/copy/
+    eleventyConfig.addPassthroughCopy("assets/**");
+
+    // You won't need this by default but if you're using a custom domain with
+    // GitHub Pages, following the instructions at
+    // https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages,
+    // you're supposed to add a CNAME file with your custom domain. You can add
+    // that to the root of your repository and this will set it up correctly.
+    eleventyConfig.addPassthroughCopy("CNAME");
 
     return {
         // Your website might be hosted not at a root domain like
