@@ -36,8 +36,10 @@ npm install
 npm run serve
 ```
 
-You'll only need to run `npm install` once, and the preview website will
-automatically be regenerated as you edit the source code.
+You'll only need to run `npm install` once. `npm run serve` will let you view
+your site locally and automatically regenerates it as you edit the source code.
+You can also run `npm run build` for just compiling the code once (useful if
+you're deploying by copying to CSAIL or MIT).
 
 This is meant to be a starting point for building your own website, whether that
 means cobbling together HTML and CSS from other people's sites or making your
@@ -88,6 +90,9 @@ Take a look at https://tig.csail.mit.edu/web-services/personal-web-page/.
 You'll need to use AFS, so take a look at
 https://tig.csail.mit.edu/data-storage/afs/afs-basic-use/. (Note: AFS is terrible.)
 
+You'll want to use something to copy files to the server, like `rsync` or an SCP
+client.
+
 This will be at a URL like https://people.csail.mit.edu/nickolai/.
 
 ### MIT
@@ -95,5 +100,8 @@ This will be at a URL like https://people.csail.mit.edu/nickolai/.
 Take a look at https://sipb.mit.edu/doc/afs-and-you/. One thing they don't tell
 you: if you change a file, it'll take about 15 minutes to show up (due to
 aggressive caching that MIT's web servers do).
+
+You'll want to use something to copy files to the server, like `rsync` or an SCP
+client.
 
 This will be at a URL like https://www.mit.edu/~jda/.
