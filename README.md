@@ -130,6 +130,16 @@ Firefox, Safari, and Edge all have similar features.
   Manager, which is how you install the dependencies and run 11ty. If you're
   curious [package.json](package.json) is where the Node.js configuration lives.
 
+* Why do I get security/Dependabot warnings?
+
+  Unfortunately, there's a [bug here in
+  11ty](https://github.com/11ty/eleventy/issues/2213). It doesn't affect you,
+  nothing is actually insecure. In more detail, 11ty runs a web server to
+  preview your work locally (but only while you're working on it). The component
+  that runs that has a security vulnerability, which 11ty hasn't yet
+  incorporated the fix for. However, it won't affect the _generated_ website you
+  deploy, since that isn't using this development web server.
+
 * What are Nunjucks and Sass? What's a `.njk`/`.11tydata.js`/`.scss` file?
 
   Nunjucks is a template language. It takes the `.njk` file and some associated
