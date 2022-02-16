@@ -1,19 +1,18 @@
 {
-  "name": "personal-website-demo",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
-    "debug": "DEBUG=* npx @11ty/eleventy"
-  },
-  "license": "MIT",
-  "author": "",
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
-  },
-  "dependencies": {
-    "@grimlink/eleventy-plugin-sass": "^1.0.1",
-    "sass": "^1.49.7"
-  }
+    "name": "personal-website-demo",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "npx @11ty/eleventy",
+        "serve": "npx @11ty/eleventy --serve",
+    },
+    "license": "MIT",
+    "author": "",
+    "devDependencies": {
+        "@11ty/eleventy": "^1.0.0"
+    },
+    "dependencies": {
+        "@grimlink/eleventy-plugin-sass": "^1.0.1",
+        "sass": "^1.49.7"
+    }
 }

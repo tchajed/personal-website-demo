@@ -101,6 +101,39 @@ a good overview, as is the
 [MDN](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
 Firefox, Safari, and Edge all have similar features.
 
+## Questions you might have
+
+* What is Eleventy/11ty?
+
+  This is a static-site generator, a program that takes all the inputs for your
+  website and outputs its HTML, CSS, and any other files.
+
+* What is Node.js/npm?
+
+  Node.js (or just Node for short) is a framework for running JavaScript outside
+  the browser - it's the language that powers 11ty. npm is the Node Package
+  Manager, which is how you install the dependencies and run 11ty. If you're
+  curious [package.json](package.json) is where the Node.js configuration lives.
+
+* What are Nunjucks and Sass? What's a `.njk`/`.11tydata.js`/`.scss` file?
+
+  Nunjucks is a template language. It takes the `.njk` file and some associated
+  data, and it fills in template instructions like those inside `{% %}` and `{{
+  }}` using the data. That data, in our case, comes from a `.11tydata.js` file,
+  which is written in JavaScript.
+
+  SCSS is a fancier version of CSS that's a bit nicer to use, but you can always
+  write CSS in that file.
+
+* What if I want to make my own design? Or use a different template?
+
+  You definitely can! You can always write HTML and CSS, or copy bits and pieces
+  from elsewhere. You might want to use some of the features of
+  https://www.11ty.dev/docs/ to build the website - for example, if you have
+  multiple pages you can share parts using layouts and partials. You don't have
+  to do any of this - copy-pasting code is totally acceptable.
+
+
 ## Deploying your website
 
 We can give you three ways to deploy your site: GitHub Pages, CSAIL hosting, and
