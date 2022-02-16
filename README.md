@@ -54,9 +54,25 @@ file, powered by the data from `index.11tydata.js`. Next, you can take a look at
 written in [Sass](https://sass-lang.com/documentation), which extends CSS with
 some nice features like variables and mixins.
 
+## Writing a website
+
+The template doesn't have anything fancy in the way of design. Feel free to look
+at existing websites and try to copy parts that you like. For general help on
+the web, the MDN from Mozilla is a great resources (here's their [getting
+started](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+page).
+
+Browser Developer Tools are a great way to inspect websites and see what makes
+them tick - the [Chrome
+DevTools](https://developer.chrome.com/docs/devtools/overview/) documentation is
+a good overview, as is the
+[MDN](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
+Firefox, Safari, and Edge all have similar features.
+
 ## Deploying your website
 
-There are three ways to deploy your site: GitHub Pages, CSAIL hosting, and MIT hosting.
+We can give you three ways to deploy your site: GitHub Pages, CSAIL hosting, and
+MIT hosting.
 
 ### GitHub pages
 
