@@ -235,12 +235,13 @@ AFS, so take a look at
 https://tig.csail.mit.edu/data-storage/afs/afs-basic-use/. (Note: AFS is
 terrible.)
 
-You'll want to use something to copy files to the server, like `rsync` or an SCP
-client. Run `npm run build` to compile the website to the `_site` directory,
-then copy over this site, for example with `rsync -az _site/
+Once you have permissions set up, you need to copy over your website to the
+CSAIL servers.  Run `npm run build` to compile the website to the `_site`
+directory, then copy over this site, for example with `rsync -avz _site/
 login.csail.mit.edu:./public_html/`. Note that you will need to compile locally
 and copy over the result because unfortunately the CSAIL login server doesn't
-have Node/npm installed.
+have Node/npm installed. Instead of `rsync` you should also be able to use an
+SCP client.
 
 ### MIT
 
