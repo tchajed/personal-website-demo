@@ -237,22 +237,26 @@ terrible.)
 
 Once you have permissions set up, you need to copy over your website to the
 CSAIL servers.  Run `npm run build` to compile the website to the `_site`
-directory, then copy over this site, for example with `rsync -avz _site/
-login.csail.mit.edu:./public_html/`. Note that you will need to compile locally
-and copy over the result because unfortunately the CSAIL login server doesn't
-have Node/npm installed. Instead of `rsync` you should also be able to use an
-SCP client.
+directory, then compile all the contents of that directory to your `public_html`
+directory. You can do that with `rsync -avz _site/
+login.csail.mit.edu:./public_html/` (the trailing slash on `_site/` is important
+- it tells rsync to copy the contents of `_site`, not the directory itself).
+Note that you will need to compile locally and copy over the result because
+unfortunately the CSAIL login server doesn't have Node/npm installed. Instead of
+`rsync` you should also be able to use an SCP client.
 
 ### MIT
+
+This will be at a URL like https://www.mit.edu/~jda/.
 
 Take a look at https://sipb.mit.edu/doc/afs-and-you/. One thing they don't tell
 you: if you change a file, it'll take about 15 minutes to show up (due to
 aggressive caching that MIT's web servers do).
 
-You'll want to use something to copy files to the server, like `rsync` or an SCP
-client.
-
-This will be at a URL like https://www.mit.edu/~jda/.
+Take a look at the instructions above for CSAIL. The website is stored at
+`~/www` instead of `~/public_html`.  **You won't need to do the AFS setup**
+because MIT sets up `~/www` for you. You'll still run `npm run build` to compile
+and then copy with `rsync -avz _site/ athena.dialup.mit.edu:./www/`.
 
 # What to put on your website
 
