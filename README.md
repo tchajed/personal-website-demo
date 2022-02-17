@@ -182,6 +182,11 @@ page, click on Pages in the sidebar, and enable Pages. Deploy from the
 ([build.yml](.github/workflows/build.yml)) automatically compiles (by running Eleventy) and deploys
 your site to this branch every time you push to the repository.
 
+GitHub Pages is free for public repositories. If you want to use GitHub Pages
+with a private repository, you can get a GitHub Pro account for free as a
+student by signing up for the [GitHub Student Developer
+Pack](https://education.github.com/pack).
+
 By default, your site will be accessible from a URL like
 https://tchajed.github.io/personal-website-demo, but it will use your GitHub
 username and whatever you named the repo. However, you can use just
@@ -204,14 +209,25 @@ running your website - you're just buying a domain that points to their servers.
 
 ### CSAIL
 
-If you have a CSAIL account, you can use their hosting.  Take a look at
-https://tig.csail.mit.edu/web-services/personal-web-page/.
+If you have a CSAIL account, you can use their hosting. The TIG documentation is confusing, so let me try to walk through it myself. You'll need to ssh to `login.csail.mit.edu` (with your CSAIL username/password), then run the following `mkdir ~/public_html` if you don't already have that directory. Finally, you need to set the permissions on that file, but its AFS permissions and not the usual UNIX permissions you're used to:
 
-You'll need to use AFS, so take a look at
-https://tig.csail.mit.edu/data-storage/afs/afs-basic-use/. (Note: AFS is terrible.)
+```
+fs setacl ~/public_html system:anyuser none www rl
+```
+
+The way to read this is it sets up two permissions: `system:anyuser` has access `none` (deny by default), then the `www` group has **r**ead and **l**ookup permissions, which the web server needs to read you website.
+
+The public documentation is at
+https://tig.csail.mit.edu/web-services/personal-web-page/.  You'll need to use
+AFS, so take a look at
+https://tig.csail.mit.edu/data-storage/afs/afs-basic-use/. (Note: AFS is
+terrible.)
 
 You'll want to use something to copy files to the server, like `rsync` or an SCP
-client.
+client. Run `npm run build` to compile the website to the `_site` directory,
+then copy over this site, for example with `rsync -az _site/
+login.csail.mit.edu:./public_html/`. Note that you will need to compile locally
+because unfortunately the CSAIL login server doesn't have Node/npm installed, so
 
 This will be at a URL like https://people.csail.mit.edu/nickolai/.
 
