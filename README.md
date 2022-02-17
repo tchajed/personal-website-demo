@@ -209,13 +209,25 @@ running your website - you're just buying a domain that points to their servers.
 
 ### CSAIL
 
-If you have a CSAIL account, you can use their hosting. The TIG documentation is confusing, so let me try to walk through it myself. You'll need to ssh to `login.csail.mit.edu` (with your CSAIL username/password), then run the following `mkdir ~/public_html` if you don't already have that directory. Finally, you need to set the permissions on that file, but its AFS permissions and not the usual UNIX permissions you're used to:
+If you have a CSAIL account, you can use their hosting. This will be at a URL
+like https://people.csail.mit.edu/nickolai/.
+
+The TIG documentation is confusing, so let me try to walk through it myself.
+You'll need to ssh to `login.csail.mit.edu` (with your CSAIL username/password),
+then run the following `mkdir ~/public_html` if you don't already have that
+directory. Finally, you need to set the permissions on that file, but
+specifically its _AFS_ permissions and not the usual UNIX permissions you're
+used to seeing with `ls` and modifying with `chmod`:
 
 ```
 fs setacl ~/public_html system:anyuser none www rl
 ```
 
-The way to read this is it sets up two permissions: `system:anyuser` has access `none` (deny by default), then the `www` group has **r**ead and **l**ookup permissions, which the web server needs to read you website.
+The way to read this is it sets up two permissions: `system:anyuser` has access
+`none` (deny by default), then the `www` group has **r**ead and **l**ookup
+permissions, which the web server needs to read you website.
+
+You can run `fs listacl ~/public_html` to check the results.
 
 The public documentation is at
 https://tig.csail.mit.edu/web-services/personal-web-page/.  You'll need to use
@@ -227,9 +239,8 @@ You'll want to use something to copy files to the server, like `rsync` or an SCP
 client. Run `npm run build` to compile the website to the `_site` directory,
 then copy over this site, for example with `rsync -az _site/
 login.csail.mit.edu:./public_html/`. Note that you will need to compile locally
-because unfortunately the CSAIL login server doesn't have Node/npm installed, so
-
-This will be at a URL like https://people.csail.mit.edu/nickolai/.
+and copy over the result because unfortunately the CSAIL login server doesn't
+have Node/npm installed.
 
 ### MIT
 
